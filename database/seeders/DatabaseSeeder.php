@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-2.jpg',
+                'image_url' => 'frontend/assets/img/product/product-2.jpg',
                 'status' => 'ACTIVE',
             ],
             [
@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-3.jpg',
+                'image_url' => 'frontend/assets/img/product/product-3.jpg',
                 'status' => 'ACTIVE',
             ],
             [
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-4.jpg',
+                'image_url' => 'frontend/assets/img/product/product-4.jpg',
                 'status' => 'ACTIVE',
             ],
             [
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-5.jpg',
+                'image_url' => 'frontend/assets/img/product/product-5.jpg',
                 'status' => 'ACTIVE',
             ],
             [
@@ -62,7 +62,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-6.jpg',
+                'image_url' => 'frontend/assets/img/product/product-6.jpg',
                 'status' => 'ACTIVE',
             ],
             [
@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-7.jpg',
+                'image_url' => 'frontend/assets/img/product/product-7.jpg',
                 'status' => 'ACTIVE',
             ],
             [
@@ -78,7 +78,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-8.jpg',
+                'image_url' => 'frontend/assets/img/product/product-8.jpg',
                 'status' => 'ACTIVE',
             ],
         ];
