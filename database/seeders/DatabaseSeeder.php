@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Delicious crab meal',
                 'price' => 30.00,
                 'stock' => 10,
-                'image_url' => 'images/feature-1.jpg',
+                'image_url' => 'frontend/assets/img/product/product-1.jpg',
                 'status' => 'ACTIVE',
             ],
             [
@@ -92,11 +92,10 @@ class DatabaseSeeder extends Seeder
 
 
 
-    User::factory()->create([
-        'name' => 'admin',
-        'email' => 'admin@example.com',
-        'password' => Hash::make('123'),
-    ]);
-
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@example.com',
+            'password' => Hash::make('123'),
+        ]);
     }
 }

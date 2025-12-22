@@ -12,7 +12,7 @@
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
                             <img class="product__details__pic__item--large"
-                                src="{{ asset('storage/' . $product->image_url) }}" alt="{{ $product->name }}">
+                                src="{{ asset($product->image_url) }}" alt="{{ $product->name }}">
                         </div>
                     </div>
                 </div>
