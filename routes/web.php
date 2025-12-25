@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Backend\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +32,14 @@ Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.in
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::get('/checkout/confirm/{order}', [CheckoutController::class, 'confirm'])->name('checkout.confirm');
 
-
-
 Route::get('/product/{id}', [ProductController::class, 'show'])
     ->name('product.detail');
 
-
+Route::prefix('backend/dashboard')->name('backend.dashboard.')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('index');
+    Route::get('/create', [DashboardController::class, 'create'])->name('create');
+    Route::post('/store', [DashboardController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [DashboardController::class, 'edit'])->name('edit');
+    Route::put('/update/{id}', [DashboardController::class, 'update'])->name('update');
+    Route::delete('/delete/{id}', [DashboardController::class, 'destroy'])->name('destroy');
+});

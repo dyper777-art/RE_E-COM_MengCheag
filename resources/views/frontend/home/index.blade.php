@@ -28,6 +28,7 @@
                             <div class="featured__item__text">
                                 <h6>{{ $products[$i]->name }}</h6>
                                 <h5>${{ $products[$i]->price }}</h5>
+                                <h5>${{ $products[$i]->description }}</h5>
                             </div>
                         </div>
                     </div>

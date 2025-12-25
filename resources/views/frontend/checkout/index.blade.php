@@ -17,7 +17,7 @@
                     <div class="col-lg-8 col-md-6">
                         <div class="checkout__input mb-3">
                             <p>Name <span>*</span></p>
-                            <input type="text" name="customer_name" class="form-control" placeholder="Customer Name" required>
+                            <input type="text" name="customer_name" class="form-control" placeholder="Full Name" required>
                         </div>
 
                         <div class="checkout__input mb-3">
@@ -48,14 +48,14 @@
                                         {{ $item['name'] }}
                                         <span>${{ number_format($item['price'] * $item['quantity'], 2) }}</span>
                                     </li>
-                                    <!-- Hidden input for quantity & id (optional) -->
+                                    <!-- Hidden input for quantity & id -->
                                     <input type="hidden" name="cart[{{ $id }}][quantity]" value="{{ $item['quantity'] }}">
                                 @endforeach
                             </ul>
 
                             @php
                                 $subtotal = array_sum(array_map(fn($item) => $item['price'] * $item['quantity'], $cart));
-                                $vat = $subtotal * 0.1;
+                                $vat = $subtotal * 0.1; // 10% VAT
                                 $total = $subtotal + $vat;
                             @endphp
 

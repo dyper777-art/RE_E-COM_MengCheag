@@ -13,18 +13,15 @@
                             <li class="flex-grow-1"></li>
                             <li class="@if(request()->routeIs('home*')) active @endif"><a href="{{ route('home') }}">Home</a></li>
                             <li class="@if(request()->routeIs('cart*')) active @endif"><a href="{{ route('cart.index') }}">Cart</a></li>
+                            {{-- <li class="@if(request()->routeIs('dashboard*')) active @endif"><a href="{{ route('dashboard') }}">Login</a></li> --}}
                         </ul>
                     </nav>
                 </div>
-                {{-- <div class="col-lg-3">
+                <div class="col-lg-3">
                     <div class="header__cart">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-                        </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                        <div class="header__cart__price"><a href="{{ route('backend.dashboard.index') }}"><h5><i class="fa fa-user">&nbsp;Login</i></h5></a></div>
                     </div>
-                </div> --}}
+                </div>
             </div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
