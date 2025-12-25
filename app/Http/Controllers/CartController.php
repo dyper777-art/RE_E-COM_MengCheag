@@ -57,12 +57,21 @@ class CartController extends Controller
             'quantity' => 'required|integer|min:1'
         ]);
 
-        $cart = session()->get('cart');
+        $cart = session()->get('cart', []);
 
         if (isset($cart[$request->id])) {
             $cart[$request->id]['quantity'] += $request->quantity;
-            session()->put('cart', $cart);
+        } else {
+            $product = Product::findOrFail($request->id);
+            $cart[$request->id] = [
+                'name'        => $product->name,
+                'price'       => $product->price,
+                'description' => $product->description,
+                'quantity'    => $request->quantity,
+            ];
         }
+
+        session()->put('cart', $cart);
 
         return redirect()->back()->with('success', 'Cart updated');
     }
